@@ -1,4 +1,4 @@
-package com.buzhengwei.mybatisboot;
+package com.bzwframework.bzwmybatis;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

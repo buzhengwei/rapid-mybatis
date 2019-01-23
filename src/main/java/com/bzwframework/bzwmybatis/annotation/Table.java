@@ -1,4 +1,4 @@
-package com.buzhengwei.mybatisboot.annotation;
+package com.bzwframework.bzwmybatis.annotation;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;

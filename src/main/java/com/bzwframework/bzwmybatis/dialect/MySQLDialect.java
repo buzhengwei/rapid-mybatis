@@ -1,45 +1,26 @@
-package com.buzhengwei.mybatisboot.dialect;
+package com.bzwframework.bzwmybatis.dialect;
 
-import com.buzhengwei.mybatisboot.Dialect;
+import com.bzwframework.bzwmybatis.Dialect;
 
 import java.math.BigDecimal;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @ClassName: OracleDialect
- * @Package com.sdepc.fim.common.jdbc.dialect
- * @Description: Oracle的相关特例处理，例：分页
- * @author zhengwei.bu
- * @date 2014�?2�?12�? 下午2:12:53
- */
-public class OracleDialect extends Dialect {
 
+/**
+ * @ClassName: MySQLDialect
+ * @Package com.sdepc.fim.common.jdbc.dialect
+ * @Description: MySQL的相关特例处理，例：分页
+ * @author zhengwei.bu
+ * @date 2014�?2�?12�? 下午2:12:13
+ */
+public class MySQLDialect extends Dialect {
+	
 	@Override
 	public String getLimitString(String sql, long beginRowNumber, long endRowNumber) {
-		sql = sql.trim();
-		if ( sql.toLowerCase().endsWith( " for update" ) ) {
-			sql = sql.substring( 0, sql.length()-11 );
-		}
-
-		final StringBuilder pagingSelect = new StringBuilder( sql.length()+100 );
-		if (beginRowNumber>0) {
-			pagingSelect.append( "select * from ( select row_.*, rownum rownum_ from ( " );
-		}
-		else {
-			pagingSelect.append( "select * from ( " );
-		}
-		pagingSelect.append( sql );
-		if (beginRowNumber>0) {
-			pagingSelect.append( " ) row_ ) where rownum_ <= "+endRowNumber+" and rownum_ >= "+beginRowNumber );
-		}
-		else {
-			pagingSelect.append( " ) where rownum <= "+endRowNumber );
-		}
-		return pagingSelect.toString();
+		return sql + (beginRowNumber>1 ? " limit "+(beginRowNumber-1)+", "+(endRowNumber-beginRowNumber+1) : " limit "+endRowNumber);
 	}
 
 	@Override
@@ -48,7 +29,7 @@ public class OracleDialect extends Dialect {
 		if ( sql.toLowerCase().endsWith( " for update" ) ) {
 			sql = sql.substring( 0, sql.length()-11 );
 		}
-		return "select count(0) from (" + sql+ ")";
+		return "select count(0) from (" + sql.trim()+ ") as temp_count";
 	}
 
 	@Override

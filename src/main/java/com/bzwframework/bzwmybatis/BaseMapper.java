@@ -1,4 +1,4 @@
-package com.buzhengwei.mybatisboot;
+package com.bzwframework.bzwmybatis;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;

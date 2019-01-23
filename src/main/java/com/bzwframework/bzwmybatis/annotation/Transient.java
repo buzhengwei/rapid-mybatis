@@ -1,4 +1,4 @@
-package com.buzhengwei.mybatisboot.annotation;
+package com.bzwframework.bzwmybatis.annotation;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

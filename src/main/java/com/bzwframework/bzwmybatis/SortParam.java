@@ -1,4 +1,4 @@
-package com.buzhengwei.mybatisboot;
+package com.bzwframework.bzwmybatis;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

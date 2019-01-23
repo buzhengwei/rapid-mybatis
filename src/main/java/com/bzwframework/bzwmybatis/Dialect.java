@@ -1,7 +1,7 @@
-package com.buzhengwei.mybatisboot;
+package com.bzwframework.bzwmybatis;
 
-import com.buzhengwei.mybatisboot.dialect.MySQLDialect;
-import com.buzhengwei.mybatisboot.dialect.OracleDialect;
+import com.bzwframework.bzwmybatis.dialect.MySQLDialect;
+import com.bzwframework.bzwmybatis.dialect.OracleDialect;
 
 /**
  * @ClassName: Dialect
