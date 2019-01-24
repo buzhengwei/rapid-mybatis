@@ -1,7 +1,7 @@
-package com.bzwframework.bzwmybatis;
+package com.buzhengwei.rapidmybatis;
 
-import com.bzwframework.bzwmybatis.dialect.MySQLDialect;
-import com.bzwframework.bzwmybatis.dialect.OracleDialect;
+import com.buzhengwei.rapidmybatis.dialect.MySQLDialect;
+import com.buzhengwei.rapidmybatis.dialect.OracleDialect;
 
 /**
  * @ClassName: Dialect

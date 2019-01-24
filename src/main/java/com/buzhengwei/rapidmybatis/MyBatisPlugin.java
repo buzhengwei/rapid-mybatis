@@ -1,4 +1,4 @@
-package com.bzwframework.bzwmybatis;
+package com.buzhengwei.rapidmybatis;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -31,9 +31,9 @@ import org.apache.ibatis.session.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bzwframework.bzwmybatis.annotation.Column;
-import com.bzwframework.bzwmybatis.annotation.Table;
-import com.bzwframework.bzwmybatis.annotation.Transient;
+import com.buzhengwei.rapidmybatis.annotation.Column;
+import com.buzhengwei.rapidmybatis.annotation.Table;
+import com.buzhengwei.rapidmybatis.annotation.Transient;
 
 /**
  * @ClassName: MyBatisPlugin

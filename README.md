@@ -1,1 +1,1 @@
-# bzw-mybatis
+# rapid-mybatis

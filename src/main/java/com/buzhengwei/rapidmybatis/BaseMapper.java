@@ -1,4 +1,4 @@
-package com.bzwframework.bzwmybatis;
+package com.buzhengwei.rapidmybatis;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
